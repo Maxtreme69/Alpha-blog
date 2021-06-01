@@ -80,6 +80,8 @@ Rails.application.configure do
 
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
+  
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
